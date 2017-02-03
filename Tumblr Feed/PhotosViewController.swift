@@ -70,18 +70,23 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         let post = posts[indexPath.row]
         
         if let photos = post.value(forKeyPath: "photos") as? [NSDictionary] {
+            
+            let name = post.value(forKeyPath: "blog_name") as! String
+            if let avatarURL = URL(string:"https://api.tumblr.com/v2/blog/\(name).tumblr.com/avatar/512") {
+                cell.profilePic.setImageWith(avatarURL)
+                print(avatarURL)
+            }
+            cell.username.text = name
+            
+            
+            
             let imageUrlString = photos[0].value(forKeyPath: "original_size.url") as? String
             if let imageUrl = URL(string: imageUrlString!) {
                 // URL(string: imageUrlString!) is NOT nil, go ahead and unwrap it and assign it to imageUrl and run the code in the curly braces
                 cell.photoView.setImageWith(imageUrl)
-            } else {
-                // URL(string: imageUrlString!) is nil. Good thing we didn't try to unwrap it!
             }
-        } else {
-            // photos is nil. Good thing we didn't try to unwrap it!
         }
-        
         return cell
     }
-
+    
 }

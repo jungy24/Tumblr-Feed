@@ -12,6 +12,9 @@ import AFNetworking
 class PhotoCell: UITableViewCell {
 
     @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var divider: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
