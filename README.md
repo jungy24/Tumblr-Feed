@@ -1,7 +1,7 @@
 # Tumblr-Feed
 Displays pictures from Humans of New York's Tumblr
 
-![tumblr feed disp](https://cloud.githubusercontent.com/assets/21361861/22578493/3953d412-e997-11e6-8e21-46da27ef1fb4.gif)
+![tumblrfeeder](https://cloud.githubusercontent.com/assets/21361861/22815647/b01a911a-ef2a-11e6-8aae-c2bc4761747f.gif)
 
 ## License
 
